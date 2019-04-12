@@ -4,8 +4,9 @@ This is a template for building REI components using the Vue 3 CLI.
 ### Usage
 ``` bash
 $ npm install -g @vue/cli
-$ vue init rei/component
-$ cd your-project-directory
+$ npm install -g @vue/cli-init
+$ vue init rei/component your-component-name
+$ cd your-component-name
 $ npm install
 $ npm run dev
 ```
