@@ -1,6 +1,6 @@
 <template>
   <div class="child-component">
-    <cdr-text modifier="body">{{ accordionLabel }}</cdr-text>
+    <cdr-text modifier="body">\{{ accordionLabel }}</cdr-text>
     <div v-if="faqs">
       <cdr-accordion :compact="true">
         <cdr-accordion-item
@@ -11,7 +11,7 @@
           :label="faq.question"
         >
           <cdr-text tag="p">
-            {{ faq.answer }}
+            \{{ faq.answer }}
           </cdr-text>
         </cdr-accordion-item>
       </cdr-accordion>

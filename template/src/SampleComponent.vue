@@ -46,7 +46,7 @@ export default {
       tag="h1"
       modifier="display"
     >
-      {{ title }}
+      \{{ title }}
     </cdr-text>
     <sample-child-component
       v-if="showFaqs"
@@ -67,11 +67,11 @@ export default {
     </cdr-button>
 
     <!-- CDR Icon Sprite should be only loaded once per page -->
-    <!-- This is used here as an example --> 
+    <!-- This is used here as an example -->
     <cdr-icon-sprite />
 
     <div v-if="selectedStore">
-      {{ selectedStore.name }}
+      \{{ selectedStore.name }}
     </div>
   </div>
 </template>
