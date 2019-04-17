@@ -46,7 +46,7 @@ export default {
       tag="h1"
       modifier="display"
     >
-      \{{ title }}
+      {{ title }}
     </cdr-text>
     <sample-child-component
       v-if="showFaqs"
@@ -71,7 +71,7 @@ export default {
     <cdr-icon-sprite />
 
     <div v-if="selectedStore">
-      \{{ selectedStore.name }}
+      {{ selectedStore.name }}
     </div>
   </div>
 </template>
