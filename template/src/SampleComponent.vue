@@ -62,17 +62,10 @@ export default {
     <cdr-button
       :on-click="toggleFaqs"
     >
-      <cdr-icon
-        slot="icon"
-        :use="`#plus-${}`"
-        class="cdr-button__icon"
-        modifier="inherit-color"
-      />
+      <icon-x-fill v-if="showFaqs" />
+      <icon-check-fill v-else />
       {{ toggleBtnText }}
     </cdr-button>
-
-    <icon-x-fill v-if="showFaqs" />
-    <icon-check-fill v-else />
 
     <div v-if="selectedStore">
       {{ selectedStore.name }}
