@@ -5,7 +5,7 @@ import { CdrIcon, CdrIconSprite } from '@rei/cdr-icon';
 import SampleChildComponent from './components/SampleChildComponent';
 
 export default {
-  name: '{{ name.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); }}',
+  name: '{{ name }}',
   components: {
     CdrButton,
     CdrIcon,
