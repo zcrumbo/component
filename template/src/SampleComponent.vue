@@ -62,8 +62,18 @@ export default {
     <cdr-button
       :on-click="toggleFaqs"
     >
-      <icon-x-fill v-if="showFaqs" />
-      <icon-check-fill v-else />
+      <icon-x-fill
+        v-if="showFaqs"
+        slot="icon"
+        class="cdr-button__icon"
+        inherit-color
+      />
+      <icon-check-fill
+        v-else
+        slot="icon"
+        class="cdr-button__icon"
+        inherit-color
+      />
       {{ toggleBtnText }}
     </cdr-button>
 
