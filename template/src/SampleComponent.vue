@@ -1,15 +1,15 @@
 <script>
 import { CdrText } from '@rei/cdr-text';
 import { CdrButton } from '@rei/cdr-button';
-import { CdrIcon, CdrIconSprite } from '@rei/cdr-icon';
+import { IconCheckFill, IconXFill } from '@rei/cdr-icon';
 import SampleChildComponent from './components/SampleChildComponent';
 
 export default {
   name: 'SampleComponent',
   components: {
     CdrButton,
-    CdrIcon,
-    CdrIconSprite,
+    IconCheckFill,
+    IconXFill,
     CdrText,
     SampleChildComponent,
   },
@@ -64,16 +64,15 @@ export default {
     >
       <cdr-icon
         slot="icon"
-        use="#plus-fill"
+        :use="`#plus-${}`"
         class="cdr-button__icon"
         modifier="inherit-color"
       />
       {{ toggleBtnText }}
     </cdr-button>
 
-    <!-- CDR Icon Sprite should be only loaded once per page -->
-    <!-- This is used here as an example -->
-    <cdr-icon-sprite />
+    <icon-x-fill v-if="showFaqs" />
+    <icon-check-fill v-else />
 
     <div v-if="selectedStore">
       {{ selectedStore.name }}
