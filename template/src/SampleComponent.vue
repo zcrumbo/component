@@ -33,6 +33,11 @@ export default {
       selectedStore: null,
     };
   },
+  computed: {
+    toggleBtnText() {
+      return this.showFaqs ? 'Hide FAQs' : 'Show FAQs';
+    },
+  },
   methods: {
     toggleFaqs() {
       this.showFaqs = !this.showFaqs;
@@ -63,7 +68,7 @@ export default {
         class="cdr-button__icon"
         modifier="inherit-color"
       />
-      Click me
+      {{ toggleBtnText }}
     </cdr-button>
 
     <!-- CDR Icon Sprite should be only loaded once per page -->
