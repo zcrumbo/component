@@ -3,6 +3,7 @@
   "description": "{{ description }}",
   "version": "1.0.0",
   "author": "{{ author }}",
+  "main": "src/main.js",
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
