@@ -1,5 +1,3 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 
 /* Bring In Style Sheets here for local development.
@@ -13,8 +11,8 @@ import '@rei/cdr-button/dist/cdr-button.css';
 import '@rei/cdr-icon/dist/cdr-icon.css';
 import '@rei/cdr-cta/dist/cdr-cta.css';
 
-/* Bring in entry component here */
-import SampleComponent from './SampleComponent';
+/* Bring in entry component here - from 'main' field in package.json */
+import SampleComponent from '.';
 
 Vue.config.productionTip = false;
 
