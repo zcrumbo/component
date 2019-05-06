@@ -14,7 +14,7 @@
     author: {
       type: 'string',
       label: 'Author'
-    }
+    },
     addComponents: {
       type: 'boolean',
       required: true,
