@@ -5,8 +5,8 @@ import babel from 'rollup-plugin-babel';
 import path from 'path';
 import autoprefixer from 'autoprefixer';
 import rollupPluginCommonjs from 'rollup-plugin-commonjs';
-import packageJson from './package.json';
 import VuePlugin from 'rollup-plugin-vue';
+import packageJson from './package.json';
 
 const { dependencies = {}, peerDependencies = {} } = packageJson;
 
@@ -39,6 +39,10 @@ export default {
     console.warn(warning.message);
   },
   plugins: [
+    babel({
+      exclude: nodeModules,
+      runtimeHelpers: true,
+    }),
     rollupPluginCommonjs({
       extensions: ['.js', '.jsx'],
     }),
@@ -55,10 +59,6 @@ export default {
             ? '[name]-[local]'
             : '[md5:hash:base64:16]',
       },
-    }),
-    babel({
-      exclude: nodeModules,
-      runtimeHelpers: true,
     }),
     VuePlugin({
       css: false,

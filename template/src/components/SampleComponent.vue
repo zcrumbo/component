@@ -2,7 +2,8 @@
 import { CdrText } from '@rei/cdr-text';
 import { CdrButton } from '@rei/cdr-button';
 import { IconCheckFill, IconXFill } from '@rei/cdr-icon';
-import SampleChildComponent from './components/SampleChildComponent';
+import SampleChildComponent from './SampleChildComponent.vue';
+import SampleJsxComponent from './SampleJsxComponent.jsx';
 
 export default {
   name: 'SampleComponent',
@@ -12,6 +13,7 @@ export default {
     IconXFill,
     CdrText,
     SampleChildComponent,
+    SampleJsxComponent,
   },
   props: {
     title: {
@@ -21,10 +23,12 @@ export default {
     },
     accordionLabel: {
       type: String,
+      required: true,
     },
     faqs: {
       type: Array,
       required: false,
+      default: () => [],
     },
   },
   data() {
@@ -47,21 +51,17 @@ export default {
 </script>
 <template>
   <div class="sample-component">
-    <cdr-text
-      tag="h1"
-      modifier="display"
-    >
+    <cdr-text tag="h1" modifier="display">
       {{ title }}
     </cdr-text>
+    <sample-jsx-component />
     <sample-child-component
       v-if="showFaqs"
       :faqs="faqs"
       :accordion-label="accordionLabel"
       class="cdr-stack"
     />
-    <cdr-button
-      :on-click="toggleFaqs"
-    >
+    <cdr-button :on-click="toggleFaqs">
       <icon-x-fill
         v-if="showFaqs"
         slot="icon"
@@ -83,10 +83,10 @@ export default {
   </div>
 </template>
 <style lang="scss">
-  @import '~@rei/cdr-tokens/dist/cdr-tokens.scss';
-  .cdr-button {
-    &__icon {
-      fill: $clean-slate;
-    }
+@import '../globals.scss';
+.cdr-button {
+  &__icon {
+    fill: $clean-slate;
   }
+}
 </style>
