@@ -18,7 +18,7 @@
     addComponents: {
       type: 'boolean',
       required: true,
-      label: 'Include sample Vue components?'
+      label: 'Include sample Vue components?',
       default: true,
     }
   },
