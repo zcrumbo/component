@@ -48,7 +48,7 @@
     "@babel/preset-env": "^7.4.4",
     "@babel/runtime": "^7.4.4",
     "@rei/browserslist-config": "^1.0.4",
-    "@rei/febs": "git+https://github.com/rei/febs.git#remove-wp-config-dupes",
+    "@rei/febs": "^4.0.1",
     "@rei/vunit": "^2.0.0",
     "@vue/babel-preset-jsx": "^1.0.0-beta.3",
     "@vue/test-utils": "^1.0.0-beta.29",
