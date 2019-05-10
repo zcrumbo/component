@@ -1,5 +1,5 @@
 import { CdrButton } from '@rei/cdr-button';
-import { CdrText } from '@rei/cdr-text';
+import styles from './SampleCssModule.scss'
 
 export default {
   name: 'SampleJsxComponent',
@@ -9,8 +9,8 @@ export default {
     };
   },
   computed: {
-    computedModifier() {
-      return this.arbitraryState ? 'heading-small-static' : 'subheading';
+    Tag() {
+      return this.arbitraryState ? 'div' : 'span';
     },
   },
   methods: {
@@ -19,11 +19,12 @@ export default {
     },
   },
   render() {
+    const { Tag } = this;
     return (
       <div>
-        <CdrText tag="h2" modifier={this.computedModifier}>
-          Inspect this text to see dynamic modifier applied
-        </CdrText>
+        <Tag class={styles.textBlock}>
+          JSX component - inspect to see dynamic modifier applied
+        </Tag>
         <CdrButton {...{ props: { onClick: this.toggleArbitraryState } }}>
           Change State of above text
         </CdrButton>

@@ -21,6 +21,10 @@ export default {
       required: true,
       default: 'Title Not Set',
     },
+    description: {
+      type: String,
+      default: 'Description not set'
+    },
     accordionLabel: {
       type: String,
       required: true,
@@ -54,7 +58,9 @@ export default {
     <cdr-text tag="h1" modifier="display">
       {{ title }}
     </cdr-text>
-    <sample-jsx-component />
+    <cdr-text tag="p" modifier="body">
+      {{ description }}
+    </cdr-text>
     <sample-child-component
       v-if="showFaqs"
       :faqs="faqs"
@@ -76,14 +82,12 @@ export default {
       />
       {{ toggleBtnText }}
     </cdr-button>
-
-    <div v-if="selectedStore">
-      {{ selectedStore.name }}
-    </div>
+    <sample-jsx-component />
   </div>
 </template>
 <style lang="scss">
 @import '../globals.scss';
+// cedar tokens imported into globals.scss available here
 .cdr-button {
   &__icon {
     fill: $clean-slate;

@@ -46,13 +46,16 @@
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
+    "@babel/runtime": "^7.4.4",
     "@rei/browserslist-config": "^1.0.4",
-    "@rei/febs": "^4.0.0",
+    "@rei/febs": "git+https://github.com/rei/febs.git#remove-wp-config-dupes",
     "@rei/vunit": "^2.0.0",
     "@vue/babel-preset-jsx": "^1.0.0-beta.3",
+    "@vue/test-utils": "^1.0.0-beta.29",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.26.0",
     "babel-eslint": "^10.0.1",
+    "chai": "^4.2.0",
     "cross-env": "^5.0.5",
     "css-loader": "^2.1.1",
     "eslint": "^5.16.0",
@@ -63,6 +66,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-vue": "^5.2.2",
     "npm-run-all": "^4.1.5",
+    "postcss-url": "^8.0.0",
     "prettier": "^1.17.0",
     "prettier-eslint": "^8.8.2",
     "prettier-eslint-cli": "^4.7.1",
@@ -73,5 +77,12 @@
     "rollup-plugin-node-resolve": "^4.2.3",
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-vue": "^5.0.0"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.(js|vue)"
+    ],
+    "instrument": false,
+    "sourceMap": false
   }
 }

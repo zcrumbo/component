@@ -9,6 +9,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.mjs$/,
+        type: "javascript/auto",
+      },
+      {
         test: /\.jsx$/,
         // eslint-disable-next-line global-require
         exclude: require('path').resolve('./node_modules'),

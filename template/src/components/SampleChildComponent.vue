@@ -23,7 +23,7 @@ export default {
   },
   computed: {
     cleanedFaqs() {
-      return this.faq.filter(faq => faq.question && faq.answer);
+      return this.faqs.filter(faq => faq.question && faq.answer);
     },
   },
 };
