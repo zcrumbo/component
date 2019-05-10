@@ -3,7 +3,7 @@
 
 ## To Get Started
 * Run `npm run dev` to run the component locally. (See local development below)
-{{#if_eq addComponents}}
+{{#if_eq addComponents true}}
 ### If you want to reuse the sample components:
 * Rename the SampleComponent.vue file to your preferred component name.
   * Update the name property in the `SampleComponent.vue` to reflect your new component name.
@@ -23,6 +23,12 @@ npm run dev:server
 
 # delete the dist fold and run dev build and server
 npm run dev:clean
+
+# lint files with es-lint
+npm run lint
+
+# format files with eslint-prettier
+npm run format
 
 # build for production with minification with rollup
 npm run build
@@ -51,11 +57,59 @@ npm run test
 - or bulk like so
 `npm i -S @rei/cdr-{assets,button,col,grid,row,tokens,text,img,link}`
 
-# Technologies used
-`eslint`
-`prettier`
-`febs`
-`vunit`
-`vue-test-utils`
-`chai`
-`postcss`
+### Project Structure
+```
+.
+├── index.html // local dev html file
+├── local-development.js // local dev container file
+├── src
+│   ├── components
+│   │   └── // component vue files
+│   ├── index.js // root component file
+│   ├── globals.scss // root styles
+├── test
+│   └── // spec files and test utilities
+├── package-lock.json
+├── package.json
+├── rollup.config.js
+├── febs-config.json
+└── webpack.overrides.conf.js
+
+// note: not all config files included
+```
+
+# JS packages used
+* [Vue.js](https://github.com/vuejs/vue#readme)
+* [eslint](https://eslint.org/)
+* [prettier](https://prettier.io/)
+* [febs](https://github.com/rei/febs#readme)
+* [vunit](https://github.com/rei/vunit)
+* [vue-test-utils](https://vue-test-utils.vuejs.org/)
+* [chai](https://www.chaijs.com/)
+* [scss](https://sass-lang.com/)
+* [postcss](https://postcss.org/)
+
+## <a name="contributing" href="#contributing">Contributing</a>
+
+Please read and familiarize yourself with our basics before contributing:
+
+* [Updating code in FEDPACK Repositories](https://confluence.rei.com/display/FED/Updating+Code+in+FEDPACK+Repositories)
+* [Updating npm Dependencies](https://confluence.rei.com/display/FED/Updating+npm+Dependencies)
+* [Style guides](https://github.com/rei/code-style-guides)
+* [Unit testing](https://confluence.rei.com/display/FED/Unit+Testing+on+the+Frontend)
+* [Updating tags](https://confluence.rei.com/display/FED/Updating+Code+in+FEDPACK+Repositories#UpdatingCodeinFEDPACKRepositories-git-tag)
+* [Semver versioning](http://semver.org/)
+
+### Example Publishing workflow
+
+> **Make certain you are updating the version tag before you merge to master branch.**
+
+* Update the version according to [semver](http://semver.org/) with `npm version <newversion>`. More on `npm version` [here](https://docs.npmjs.com/cli/version)
+* `git commit` your changes (with version tag!) and meaningful message. Please `squash` unnecessary or confusing commits.
+* `git push` your branch and open an PR to `master`. List at least one of the maintainers as a reviewer.
+
+* After approval, `merge` to master. A Jenkins job will kick off and your new version will be published to the private registry.
+* Update any apps that consume the package and/or notify other maintainers that a new version has been published
+
+## <a name="author" href="#author">Contributors</a>
+{{author}}
