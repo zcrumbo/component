@@ -1,5 +1,5 @@
 {
-  "name": "{{ name }}",
+  "name": "@rei/{{ name }}",
   "description": "{{ description }}",
   "author": "{{ author }}",
   "version": "0.0.1",
