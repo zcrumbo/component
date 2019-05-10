@@ -29,7 +29,7 @@ export default {
       sourcemap: true,
       dir: './dist',
       format: 'es',
-      entryFileNames: '[name].esm.js'
+      entryFileNames: '[name].mjs'
     },
   ],
   external: id => externals.some(dep => dep === id || id.startsWith(`${dep}/`)),
@@ -39,6 +39,10 @@ export default {
     console.warn(warning.message);
   },
   plugins: [
+    babel({
+      exclude: nodeModules,
+      runtimeHelpers: true,
+    }),
     rollupPluginCommonjs({
       extensions: ['.js', '.jsx'],
     }),
@@ -51,14 +55,10 @@ export default {
       plugins: [autoprefixer()],
       modules: {
         generateScopedName:
-          process.env.NODE_ENV === 'development'
+          process.env.NODE_ENV === 'dev'
             ? '[name]-[local]'
             : '[md5:hash:base64:16]',
       },
-    }),
-    babel({
-      exclude: nodeModules,
-      runtimeHelpers: true,
     }),
     VuePlugin({
       css: false,

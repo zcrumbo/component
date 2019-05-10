@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>{{ name }}</title>
-  </head>
-  <body class="cdr-inset">
-    <h1>{{ name }}</h1>
-    <p>{{ description }}</p>
-    <sample-component
-      id="app"
-      title="Sample Cedar 2 Component"
-      accordion-label="Example child component label"
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="dist/app.bundle.css">
+  <title>{{ name }}</title>
+</head>
+
+<body class="cdr-inset">
+  <main-component
+    id="app" title="{{name}}"
+    description="{{description}}"
+    {{#if_eq addComponents true}}
+      accordion-label=" Example child component label"
       :faqs="[
         {
           question: 'How do i do this?',
           answer: 'This is how.',
+          id: '1',
         },
         {
           question: 'When?',
           answer: 'The time is now.',
+          id: '2',
+
         },
         {
           question: 'Where?',
           answer: 'Anywhere you can make it happen.',
+          id: '3',
         },
       ]"
-    >
-    </sample-component>
-    <!-- built files will be auto injected -->
-  </body>
+    {{/if_eq}}>
+  </main-component>
+  <script src="dist/app.bundle.js"></script>
+</body>
+
 </html>
