@@ -1,0 +1,7 @@
+// css modules example - import styles into component
+@import '../globals';
+
+.textBlock {
+  // pulled in from cedar-tokens via globals.scss
+  @include redwood-display-20
+}
