@@ -12,7 +12,7 @@ module.exports = {
     name: {
       type: 'string',
       required: true,
-      label: 'Component name (kebab-case format',
+      label: 'Component name (kebab-case format)',
       default: 'my-component-name',
       message:
         'The name of the new component. Kebab-cased name will be used to generate relevant file names and imports, so choose carefully!.',
@@ -35,9 +35,7 @@ module.exports = {
     },
   },
   helpers: {
-    pascalcase: function(str) {
-      return toPascal(str);
-    },
+    pascalcase: toPascal,
   },
   filters: {
     'src/components/Sample*.*': 'addComponents',

@@ -21,7 +21,7 @@ npm run dev:build
 # only run the dev server in watch mode without building new files
 npm run dev:server
 
-# delete the dist fold and run dev build and server
+# delete the dist folder and run dev build and server
 npm run dev:clean
 
 # lint files with es-lint
