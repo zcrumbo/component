@@ -3,7 +3,6 @@ import { CdrText } from '@rei/cdr-text';
 import { CdrButton } from '@rei/cdr-button';
 import { IconCheckFill, IconXFill } from '@rei/cdr-icon';
 import SampleChildComponent from './SampleChildComponent.vue';
-import SampleJsxComponent from './SampleJsxComponent.jsx';
 
 export default {
   name: 'SampleComponent',
@@ -13,7 +12,6 @@ export default {
     IconXFill,
     CdrText,
     SampleChildComponent,
-    SampleJsxComponent,
   },
   props: {
     title: {
@@ -82,7 +80,6 @@ export default {
       />
       {{ toggleBtnText }}
     </cdr-button>
-    <sample-jsx-component />
   </div>
 </template>
 <style lang="scss">
