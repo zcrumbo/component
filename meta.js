@@ -15,7 +15,7 @@ module.exports = {
       label: 'Component name (kebab-case format',
       default: 'my-component-name',
       message:
-        'The name of the new component. Kebab-cased name will be used to generate relevant file names and imports.',
+        'The name of the new component. Kebab-cased name will be used to generate relevant file names and imports, so choose carefully!.',
     },
     description: {
       type: 'string',

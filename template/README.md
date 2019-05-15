@@ -27,9 +27,6 @@ npm run dev:clean
 # lint files with es-lint
 npm run lint
 
-# format files with eslint-prettier
-npm run format
-
 # build for production with minification with rollup
 npm run build
 
@@ -45,7 +42,6 @@ npm run test
 * use `local-development.js` for bringing in dependent styles from other packages for local development
   * styles for external modules should be brought into the `local-development.js` so you can locally develop and see the styles. The project that consumes the component will bring those styles in separately so that they can manage the resource bundling that makes sense for their project.
   * styles for single file components should use the style tag in `.vue` files rather than a separate style sheet. This plays nicer for projects that use different style loaders or configurations and the bundle becomes more portable.
-  * if direct usage of render functions with `jsx` is required, create a separate `.scss` file and import as a css module into that component file.
   * for now we are recommending building a distributed CSS file for this components styles as it is easier to import the component with other projects.
 * `{{pascalcase name}}.vue` is the main Vue application.
   * Sub components should be used to help organize rather than creating multiple components brought in through a single npm bundle.

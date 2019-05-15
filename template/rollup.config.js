@@ -44,10 +44,10 @@ export default {
       runtimeHelpers: true,
     }),
     rollupPluginCommonjs({
-      extensions: ['.js', '.jsx'],
+      extensions: ['.js',],
     }),
     resolve({
-      extensions: ['.mjs', '.js', '.jsx', '.vue'],
+      extensions: ['.mjs', '.js', '.vue'],
     }),
     postcss({
       extract: path.resolve('./dist/index.css'),
