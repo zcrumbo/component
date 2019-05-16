@@ -77,7 +77,6 @@ npm run test
 # JS packages used
 * [Vue.js](https://github.com/vuejs/vue#readme)
 * [eslint](https://eslint.org/)
-* [prettier](https://prettier.io/)
 * [febs](https://github.com/rei/febs#readme)
 * [vunit](https://github.com/rei/vunit)
 * [vue-test-utils](https://vue-test-utils.vuejs.org/)

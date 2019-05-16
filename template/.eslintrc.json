@@ -1,5 +1,5 @@
 {
-  "extends": ["airbnb-base", "plugin:vue/recommended", "prettier/vue"],
+  "extends": ["airbnb-base", "plugin:vue/recommended"],
   "env": {
     "node": true,
     "mocha": true,
@@ -15,14 +15,6 @@
         "exports": "always-multiline",
         "functions": "ignore"
       }
-    ],
-    "prettier/prettier": [
-      "error",
-      {
-        "trailingComma": "all",
-        "singleQuote": true
-      }
     ]
-  },
-  "plugins": ["prettier"]
+  }
 }
