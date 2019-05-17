@@ -13,6 +13,7 @@ export default {
     faqs: {
       type: Array,
       required: false,
+      default: () => [],
     },
     accordionLabel: {
       type: String,
@@ -20,18 +21,24 @@ export default {
       default: 'Accordion Label Not Set',
     },
   },
+  computed: {
+    cleanedFaqs() {
+      return this.faqs.filter(faq => faq.question && faq.answer);
+    },
+  },
 };
 </script>
 <template>
   <div class="child-component">
-    <cdr-text modifier="body">{{ accordionLabel }}</cdr-text>
+    <cdr-text modifier="body">
+      {{ accordionLabel }}
+    </cdr-text>
     <div v-if="faqs">
       <cdr-accordion :compact="true">
         <cdr-accordion-item
-          v-for="(faq, i) in faqs"
-          v-if="faq.question && faq.answer"
-          :key="`faq-${i}`"
+          v-for="(faq, i) in cleanedFaqs"
           :id="`faq-item-${i}`"
+          :key="`faq-${i}`"
           :label="faq.question"
         >
           <cdr-text tag="p">
