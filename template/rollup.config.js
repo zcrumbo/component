@@ -53,17 +53,19 @@ export default {
       extract: path.resolve('./dist/index.css'),
       inject: false,
       plugins: [autoprefixer()],
-      modules: {
-        generateScopedName:
-          process.env.NODE_ENV === 'dev'
-            ? '[name]-[local]'
-            : '[md5:hash:base64:16]',
-      },
+      // uncomment the modules property if you want to import css module files into your js instead of SFC styles
+      // modules: {
+      //   generateScopedName:
+      //     process.env.NODE_ENV === 'dev'
+      //       ? '[name]-[local]'
+      //       : '[md5:hash:base64:16]',
+      // },
     }),
     VuePlugin({
       css: false,
-      template: {
-        isProduction: true,
+      style: {
+        generateScopedName:
+          process.env.NODE_ENV === 'dev' ? '[name]-[local]' : '[md5:hash:base64:16]',
       },
     }),
   ],
