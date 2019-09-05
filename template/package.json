@@ -31,17 +31,12 @@
     "test-vue-coverage": "vunit --spec=./src/main/js/test/**/*.vue.spec.js --coverage",
     "test-vue-watch": "vunit --spec='./src/main/js/test/**/*.vue.spec.js' --watch=src/main/js"
   },
-  "dependencies": {
+  "peerDependencies": {
     {{#if_eq addComponents true}}
-    "@rei/cdr-accordion": "^1.0.4",
-    "@rei/cdr-assets": "^0.3.0",
-    "@rei/cdr-button": "^2.0.0",
-    "@rei/cdr-cta": "^1.1.1",
-    "@rei/cdr-icon": "^2.0.1",
-    "@rei/cdr-text": "^1.0.2",
-    "@rei/cdr-tokens": "^0.1.8",
+    "@rei/cedar": "^2.0.2",
     {{/if_eq}}
-    "vue": "^2.6.10"
+    "@rei/cdr-tokens": "^1.1.1",
+    "vue": "^2.5.17"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.4.4",

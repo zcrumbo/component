@@ -6,12 +6,8 @@ import Vue from 'vue';
  {{#if_eq addComponents false}}*e.g.: import '@rei/cdr-assets/dist/cdr-core.css';{{/if_eq}}
  */
 {{#if_eq addComponents true}}
-import '@rei/cdr-assets/dist/cdr-core.css';
-import '@rei/cdr-assets/dist/cdr-fonts.css';
-import '@rei/cdr-accordion/dist/cdr-accordion.css';
-import '@rei/cdr-button/dist/cdr-button.css';
-import '@rei/cdr-icon/dist/cdr-icon.css';
-import '@rei/cdr-cta/dist/cdr-cta.css';
+import '@rei/cedar/dist/cedar.css';
+import '@rei/cedar/dist/cdr-fonts.css';
 {{/if_eq}}
 /* Local components that import css will bundle styles to this file  */
 import './dist/index.css'

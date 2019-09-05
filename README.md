@@ -18,10 +18,10 @@ $ npm run dev
 |`description`| Component description |
 |`author`| Your name and email address |
 |`addComponents`| Add sample Vue.js components with Cedar dependencies |
-    
+
 
 ### About Example and Development Files
-* An example component is optionally auto-generated with Cedar 2 component examples and example Cedar Token usage.
+* An example component is optionally auto-generated with Cedar component examples and example Cedar Token usage.
 * A local development environment for building and testing props and styles from external components will be setup.
 
 ### What's Included

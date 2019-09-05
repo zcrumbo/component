@@ -1,7 +1,5 @@
 <script>
-import { CdrText } from '@rei/cdr-text';
-import { CdrButton } from '@rei/cdr-button';
-import { IconCheckFill, IconXFill } from '@rei/cdr-icon';
+import { CdrText, CdrButton, IconCheckFill, IconXFill  } from '@rei/cedar';
 import SampleChildComponent from './SampleChildComponent.vue';
 
 export default {
@@ -87,7 +85,7 @@ export default {
 // cedar tokens imported into globals.scss available here
 .cdr-button {
   &__icon {
-    fill: $clean-slate;
+    fill: $cdr-color-icon-emphasis-darkmode;
   }
 }
 </style>
