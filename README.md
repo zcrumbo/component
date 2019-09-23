@@ -29,3 +29,9 @@ $ npm run dev
 - `npm run dev`: `@rei/febs` runs the dev server and environment
 
 - `npm run build`: build `ES Modules` and `CommonJS` export files with `rollup`.
+
+### Development
+
+- Install vue-cli: `npm install -g @vue/cli @vue/cli-init`
+- Make changes inside `/template` and push the branch to GitHub
+- Run `vue init rei/component#NAME-OF-YOUR-BRANCH-HERE some-test-project`, then inspect the generated project.
