@@ -16,7 +16,7 @@ This project loads [@rei/cedar components](https://github.com/rei/rei-cedar) and
 
 ### Build system
 
-This component only contains a build system for it's dev and test environments. It expects that the micro-site consuming it will handle building it using [@rei/febs](https://github.com/rei/febs). 
+This component only contains a build system for it's dev and test environments. It expects that the micro-site consuming it will handle building it using [@rei/febs](https://github.com/rei/febs).
 
 ## Local Development
 ``` bash
