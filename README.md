@@ -18,10 +18,10 @@ $ npm run dev
 |`description`| Component description |
 |`author`| Your name and email address |
 |`addComponents`| Add sample Vue.js components with Cedar dependencies |
-    
+
 
 ### About Example and Development Files
-* An example component is optionally auto-generated with Cedar 2 component examples and example Cedar Token usage.
+* An example component is optionally auto-generated with Cedar component examples and example Cedar Token usage.
 * A local development environment for building and testing props and styles from external components will be setup.
 
 ### What's Included
@@ -29,3 +29,9 @@ $ npm run dev
 - `npm run dev`: `@rei/febs` runs the dev server and environment
 
 - `npm run build`: build `ES Modules` and `CommonJS` export files with `rollup`.
+
+### Development
+
+- Install vue-cli: `npm install -g @vue/cli @vue/cli-init`
+- Make changes inside `/template` and push the branch to GitHub
+- Run `vue init rei/component#NAME-OF-YOUR-BRANCH-HERE some-test-project`, then inspect the generated project.
