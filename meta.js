@@ -21,7 +21,7 @@ module.exports = {
       type: 'string',
       required: true,
       label: 'Component description',
-      default: 'An REI Cedar component built on Vue.js ',
+      default: 'An REI FED component built on Vue.js ',
     },
     author: {
       type: 'string',
